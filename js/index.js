@@ -7,18 +7,20 @@ function myFun(result){
     success: function(ret){
       console.log(ret);
       //今天天气
-      $("#today > .icon > img").attr("src",ret.results[0].weather_data[0].dayPictureUrl); 
-      $("#today > .temp").html(ret.results[0].weather_data[0].temperature);
-      $("#location").html(ret.results[0].currentCity);
-      $("#weather").html(ret.results[0].weather_data[0].weather);
-      $("#wind").html(ret.results[0].weather_data[0].wind);
-      //未来天气
-      $("#next1 >.icon > img").attr("src",ret.results[0].weather_data[1].dayPictureUrl);
-      $("#next1 > .temp").html(ret.results[0].weather_data[1].temperature);
-      $("#next2 >.icon > img").attr("src",ret.results[0].weather_data[2].dayPictureUrl);
-      $("#next2 > .temp").html(ret.results[0].weather_data[2].temperature);
-      $("#next3 >.icon > img").attr("src",ret.results[0].weather_data[3].dayPictureUrl);
-      $("#next3 > .temp").html(ret.results[0].weather_data[3].temperature);
+      var container = ["#today","#next1","#next2","#next3"];
+      var result = ret.results[0];
+      var weather_data = result.weather_data;
+      
+      //城市、风力
+      $("#location").html(result.currentCity);
+      $("#weather").html(result.weather_data[0].weather);
+      $("#wind").html(result.weather_data[0].wind);
+      
+      //天气情况
+      for(var i in weather_data){
+          $(container[i] + " img").attr("src",weather_data[i].dayPictureUrl);
+          $(container[i] + " .temp").html(weather_data[i].temperature);
+      }
     }
   });
 }
