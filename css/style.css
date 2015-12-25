@@ -1,8 +1,16 @@
 body {
-  background: url("http://static.pexels.com/wp-content/uploads/2014/06/clouds-colorful-colourful-1029.jpg") no-repeat;
+  font-family: "Helvetica,Arial,'宋体',sans-serif";
+  background-image: url("http://ww4.sinaimg.cn/mw690/62d95157gw1ezb4n0oc6wj211y0lc1kx.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #EFBF9B;
   background-size: cover;
 }
 
+/*.container {
+	margin-top: 40%;
+}
+*/
 .row {
   text-align: center;
 }
@@ -14,13 +22,12 @@ body {
   text-shadow: 0 0 0.3em #000;
 }
 
-#icon,
-#temp {
+#icon,#temp {
   display: inline;
 }
 
 .temp {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
   color: white;
   padding-bottom: 3%;
@@ -29,7 +36,7 @@ body {
 
 .wrap {
   margin: 0 auto;
-  width: 70%;
+  /*width: 70%;*/
 }
 
 .detail {
@@ -55,7 +62,7 @@ body {
 }
 
 .tips {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   color: aliceblue;
 }
