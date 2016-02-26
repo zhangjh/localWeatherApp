@@ -3,3 +3,4 @@
 
 ![](http://ww3.sinaimg.cn/mw690/62d95157gw1ezasi5ix1gj211y0hvaha.jpg)
 
+[点击查看效果](http://www.5941740.cn/local-weather/index.html)
